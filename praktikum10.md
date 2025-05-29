@@ -3,10 +3,9 @@ Praktikum 10
 skript.sh sisu:
 
 #!/bin/sh  
-
-iptables -F
-iptables -X naabrid 2>/dev/null
-iptables -N naabrid
+iptables -F  
+iptables -X naabrid 2>/dev/null  
+iptables -N naabrid  
 iptables -A naabrid -j LOG --log-prefix "Kustov-NAABRID-ahel: "
 iptables -A naabrid -p icmp --icmp-type echo-request -j ACCEPT
 iptables -A naabrid -m state --state NEW -p tcp --dport 22 -j LOG --log-prefix "ssh yhendused: "
