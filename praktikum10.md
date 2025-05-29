@@ -2,7 +2,8 @@ Praktikum 10
 
 skript.sh sisu:
 
-#!/bin/sh
+#!/bin/sh  
+
 iptables -F
 iptables -X naabrid 2>/dev/null
 iptables -N naabrid
